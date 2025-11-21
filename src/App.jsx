@@ -74,6 +74,98 @@ export default function App() {
           ))}
         </section>
 
+        {/* Market Funnel: TAM • SAM • SOM */}
+        <section className="rounded-3xl bg-white border border-neutral-200 p-6 sm:p-8 soft-shadow">
+          <div className="flex items-center gap-3">
+            <div className="h-1.5 w-12 gold-gradient rounded-full" />
+            <h2 className="heading-serif text-2xl text-neutral-900">Market funnel</h2>
+          </div>
+          <p className="mt-1 text-neutral-600">TAM • SAM • SOM for hyper-luxury buyers in the next 18–24 months</p>
+
+          <div className="mt-6 grid md:grid-cols-3 gap-6">
+            {[{
+              label: 'TAM',
+              expl: 'Total ultra-wealthy who can afford ₹26–140 Cr',
+              value: '~4,200 families',
+              width: 100
+            }, {
+              label: 'SAM',
+              expl: 'Actively searching during 18–24 months',
+              value: '~600–650 families',
+              width: 38
+            }, {
+              label: 'SOM',
+              expl: 'Realistic conversions (12–16%)',
+              value: '~85–90 families',
+              width: 14
+            }].map((x, i) => (
+              <motion.div key={x.label} initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: i * 0.05 }} className="rounded-2xl border border-neutral-200 p-5">
+                <div className="flex items-center justify-between">
+                  <div className="text-sm tracking-wide font-medium text-[#b89228]">{x.label}</div>
+                  <div className="text-sm text-neutral-500">{x.expl}</div>
+                </div>
+                <div className="mt-3 h-3 rounded-full bg-neutral-200 overflow-hidden">
+                  <motion.div initial={{ width: 0 }} whileInView={{ width: `${x.width}%` }} viewport={{ once: true }} transition={{ duration: 0.8, ease: 'easeOut' }} className="h-full gold-gradient-soft rounded-full" />
+                </div>
+                <div className="mt-3 heading-serif text-2xl text-neutral-900">{x.value}</div>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+
+        {/* Market Context KPIs */}
+        <section className="rounded-3xl bg-white border border-neutral-200 p-6 sm:p-8 soft-shadow">
+          <div className="flex items-center gap-3">
+            <div className="h-1.5 w-12 gold-gradient rounded-full" />
+            <h2 className="heading-serif text-2xl text-neutral-900">Market context</h2>
+          </div>
+          <p className="mt-1 text-neutral-600">Snapshot of affluent pools and likely hyper-luxury behavior</p>
+
+          <div className="mt-6 grid md:grid-cols-2 gap-5">
+            {[{
+              name: 'UHNIs in India',
+              value: '~3,600+',
+              note: 'Ultra-high-net-worth individuals'
+            }, {
+              name: 'HNIs (> ₹25–250 Cr wealth)',
+              value: '~8,00,000',
+              note: 'High-net-worth individuals'
+            }, {
+              name: 'Hyper-luxury purchase rate among HNIs',
+              value: '0.25%',
+              note: 'Only a tiny fraction buys hyper-luxury'
+            }, {
+              name: 'NRIs buying luxury real estate annually',
+              value: '~15,000–20,000 families',
+              note: 'Across India markets'
+            }, {
+              name: 'Ultra-luxury share of NRI buyers',
+              value: '2%',
+              note: 'Only a small slice goes ultra-luxury'
+            }, {
+              name: 'Mumbai + Delhi UHNI-level premium buyers',
+              value: '1,800+',
+              note: 'Primary city buyers'
+            }, {
+              name: 'Investing in Pune / second-home markets',
+              value: '≈5%',
+              note: 'Share of Mumbai/Delhi UHNI buyers'
+            }, {
+              name: 'Global family offices keen on India real estate',
+              value: '250+',
+              note: 'Growing institutional interest'
+            }].map((kpi, i) => (
+              <motion.div key={kpi.name} initial={{ opacity: 0, y: 8 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55, delay: i * 0.04 }} className="flex items-start justify-between gap-4 rounded-2xl border border-neutral-200 p-5">
+                <div className="flex-1">
+                  <div className="text-sm text-neutral-600">{kpi.name}</div>
+                  <div className="mt-1 text-xs text-neutral-500">{kpi.note}</div>
+                </div>
+                <div className="shrink-0 heading-serif text-xl text-neutral-900 px-3 py-1 rounded-lg bg-white border border-neutral-200 soft-shadow">{kpi.value}</div>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+
         {/* Competitor Benchmarks */}
         <section className="rounded-3xl bg-white border border-neutral-200 p-6 sm:p-8 soft-shadow">
           <h2 className="heading-serif text-2xl text-neutral-900">Competitor benchmarks</h2>
