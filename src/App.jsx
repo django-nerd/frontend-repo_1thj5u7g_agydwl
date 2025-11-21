@@ -250,6 +250,57 @@ export default function App() {
           </div>
         </section>
 
+        {/* Permanence vs Luxury */}
+        <section className="relative rounded-3xl border border-neutral-200 bg-white overflow-hidden soft-shadow">
+          <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(1000px_350px_at_10%_-20%, rgba(212,175,55,0.10), transparent 65%)' }} />
+          <div className="relative p-6 sm:p-10">
+            <div className="flex items-center gap-3">
+              <div className="h-1.5 w-12 gold-gradient rounded-full" />
+              <h2 className="heading-serif text-2xl text-neutral-900">Permanence, not just luxury</h2>
+            </div>
+            <p className="mt-1 text-neutral-600">A longevity-first philosophy that compounds value over decades</p>
+
+            <div className="mt-6 grid lg:grid-cols-3 gap-6">
+              {/* Left statement card */}
+              <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="lg:col-span-1 rounded-2xl border border-neutral-200 bg-white p-6">
+                <div className="text-xs tracking-wide text-[#b89228] uppercase">Positioning</div>
+                <div className="mt-2 heading-serif text-2xl text-neutral-900">Competitors sell “luxury”; Godrej sells permanence</div>
+                <p className="mt-2 text-sm text-neutral-600">Enduring construction and design details that remain desirable beyond fashion cycles.</p>
+              </motion.div>
+
+              {/* Right checklist */}
+              <div className="lg:col-span-2 grid md:grid-cols-2 gap-5">
+                {[
+                  { title: '50-year material engineering', note: 'Structural longevity, corrosion resistance, future-proof systems' },
+                  { title: 'KP heritage = enduring value', note: 'Location premium with multi-decade appreciation' },
+                  { title: 'Bespoke architecture', note: 'Zero shared walls for villa-like privacy' },
+                  { title: 'Global brand interiors', note: 'Timeless palettes, repairable finishes, upgrade paths' },
+                  { title: 'Generational elements', note: 'Vault room, heritage study, future renovation map' },
+                ].map((item, i) => (
+                  <motion.div key={item.title} initial={{ opacity: 0, y: 8 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55, delay: i * 0.04 }} className="group relative rounded-2xl border border-neutral-200 bg-white p-5">
+                    <div className="flex items-start gap-3">
+                      <div className="h-5 w-5 rounded-full bg-white border border-neutral-200 flex items-center justify-center soft-shadow">
+                        <span className="h-2 w-2 rounded-full bg-[#D4AF37] block" />
+                      </div>
+                      <div>
+                        <div className="heading-serif text-lg text-neutral-900">{item.title}</div>
+                        <div className="mt-1 text-sm text-neutral-600">{item.note}</div>
+                      </div>
+                    </div>
+                    <div className="absolute inset-x-5 bottom-0 translate-y-1/2 h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent" />
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            {/* Soft ribbon */}
+            <motion.div initial={{ opacity: 0, y: 8 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }} className="mt-6 rounded-xl border border-neutral-200 bg-white p-4 text-sm text-neutral-700 flex items-center justify-center gap-3">
+              <span className="h-1.5 w-10 rounded-full gold-gradient block" />
+              Built to be inherited, not just inhabited.
+            </motion.div>
+          </div>
+        </section>
+
         {/* White Space Callout */}
         <section className="relative overflow-hidden rounded-3xl border border-[#D4AF37]/25 bg-white soft-shadow">
           <div className="absolute inset-0 opacity-60" style={{ background: 'radial-gradient(600px_200px_at_10%_0%, rgba(212,175,55,0.12), transparent 60%)' }} />

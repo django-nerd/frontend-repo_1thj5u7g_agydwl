@@ -3,10 +3,10 @@
 > vite
 
 
-  VITE v5.4.20  ready in 195 ms
+  VITE v5.4.20  ready in 204 ms
 
   ➜  Local:   http://localhost:3000/
-  ➜  Network: http://172.20.6.21:3000/
+  ➜  Network: http://172.20.38.247:3000/
 [vite:css] @import must precede all other statements (besides @charset or empty @layer)
 4  |  
 5  |  /* Google Fonts for luxury typography */
