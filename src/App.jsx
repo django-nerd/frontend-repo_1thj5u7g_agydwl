@@ -314,109 +314,151 @@ export default function App() {
             <div className="mt-6 grid lg:grid-cols-3 gap-6 items-stretch">
               {/* Tier A */}
               <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="relative rounded-3xl border border-neutral-200 bg-white p-6 overflow-hidden h-full flex flex-col">
+                {/* Faded background image */}
+                <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1629380321590-3b3f75d66dec?ixid=M3w3OTkxMTl8MHwxfHNlYXJjaHwxfHxjZXJhbWljJTIwcG90dGVyeSUyMGhhbmRtYWRlfGVufDB8MHx8fDE3NjM3MTU4MTN8MA&ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
+                <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.92))' }} />
                 <div className="absolute -inset-px rounded-3xl pointer-events-none" style={{ background: 'linear-gradient(180deg, rgba(212,175,55,0.10), transparent 60%)' }} />
                 <div className="relative flex-1">
                   <div className="text-xs tracking-wide text-[#b89228] uppercase">A. The Legacy Residences</div>
                   <div className="mt-1 heading-serif text-xl text-neutral-900">Ultra-Luxury Family Homes</div>
-                  <div className="mt-3 flex flex-wrap items-center gap-3 text-sm text-neutral-700">
-                    <span className="rounded-full border border-neutral-200 px-3 py-1 bg-white soft-shadow">₹20–28 Cr</span>
-                    <span className="rounded-full border border-neutral-200 px-3 py-1 bg-white soft-shadow">3,500–4,300 sq.ft</span>
+                  <div className="mt-3 text-sm text-neutral-700">
+                    <span className="rounded-full border border-neutral-200 px-3 py-1 bg-white/80 soft-shadow">Price: ₹20–28 Cr</span>
+                    <span className="ml-2 rounded-full border border-neutral-200 px-3 py-1 bg-white/80 soft-shadow">Size: 3,500–4,300 sq.ft</span>
                   </div>
-                  <p className="mt-4 text-neutral-700">Crafted as long-term family assets, engineered to last.</p>
-                  <ul className="mt-4 space-y-2 text-sm text-neutral-700">
-                    <li className="flex items-start gap-2"><span className="mt-2 h-1.5 w-6 rounded-full gold-gradient block" /> 30–50 year lifespan materials</li>
-                    <li className="flex items-start gap-2"><span className="mt-2 h-1.5 w-6 rounded-full gold-gradient block" /> High-durability stone, heirloom-grade wood, metal finishes</li>
-                    <li className="flex items-start gap-2"><span className="mt-2 h-1.5 w-6 rounded-full gold-gradient block" /> Acoustic longevity pack for decade-level sound insulation</li>
-                    <li className="flex items-start gap-2"><span className="mt-2 h-1.5 w-6 rounded-full gold-gradient block" /> Sustainable HVAC & filtration designed to last generations</li>
-                    <li className="flex items-start gap-2"><span className="mt-2 h-1.5 w-6 rounded-full gold-gradient block" /> Space planning optimised for evolving family needs</li>
-                  </ul>
+
+                  <div className="mt-5 space-y-4">
+                    <div>
+                      <div className="text-xs tracking-wide text-[#b89228] uppercase">Engineering</div>
+                      <ul className="mt-2 space-y-2 text-sm text-neutral-700">
+                        <li className="flex items-start gap-2"><span className="mt-2 h-1.5 w-6 rounded-full gold-gradient block" /> 30–50 year durability framework using heirloom-grade materials</li>
+                        <li className="flex items-start gap-2"><span className="mt-2 h-1.5 w-6 rounded-full gold-gradient block" /> Advanced acoustic insulation engineered for long-term quiet living</li>
+                        <li className="flex items-start gap-2"><span className="mt-2 h-1.5 w-6 rounded-full gold-gradient block" /> Sustainable HVAC, water purification and air filtration for decades</li>
+                        <li className="flex items-start gap-2"><span className="mt-2 h-1.5 w-6 rounded-full gold-gradient block" /> Structural planning optimized for minimal long-term maintenance</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <div className="text-xs tracking-wide text-[#b89228] uppercase">Design Purpose</div>
+                      <ul className="mt-2 space-y-2 text-sm text-neutral-700">
+                        <li>Created as adaptable family homes for multi-decade living</li>
+                        <li>Spatial flow designed to support evolving generational needs</li>
+                        <li>Natural light and ventilation balanced for long-term comfort</li>
+                        <li>Aesthetics that mature well over time — “homes that age gracefully”</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <div className="text-xs tracking-wide text-[#b89228] uppercase">Legacy Features</div>
+                      <ul className="mt-2 space-y-2 text-sm text-neutral-700">
+                        <li>Long-life stone, metal and wood palette with low-wear finishes</li>
+                        <li>Dedicated family zones for continuity of lifestyle</li>
+                        <li>Layouts positioned as long-term family assets suitable for inheritance</li>
+                        <li>Positioned as secure, reliable residences built for stability and longevity</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
-                <div className="mt-auto rounded-xl border border-neutral-200 bg-white p-4 text-sm text-neutral-700 soft-shadow">
+                <div className="mt-auto rounded-xl border border-neutral-200 bg-white/90 backdrop-blur p-4 text-sm text-neutral-700 soft-shadow">
                   <div className="text-xs tracking-wide text-[#b89228] uppercase">Positioning</div>
-                  <div className="mt-1 italic">“Homes that age gracefully.”</div>
-                  <div className="mt-1">Ideal for legacy families, multigenerational living, and inheritance planning.</div>
+                  <div className="mt-1 italic">Homes that age gracefully.</div>
                 </div>
               </motion.div>
 
               {/* Tier B */}
               <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.05 }} className="relative rounded-3xl border border-neutral-200 bg-white p-6 overflow-hidden h-full flex flex-col">
+                {/* Faded background image */}
+                <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1629380321590-3b3f75d66dec?ixid=M3w3OTkxMTl8MHwxfHNlYXJjaHwxfHxjZXJhbWljJTIwcG90dGVyeSUyMGhhbmRtYWRlfGVufDB8MHx8fDE3NjM3MTU4MTN8MA&ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
+                <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.92))' }} />
                 <div className="absolute -inset-px rounded-3xl pointer-events-none" style={{ background: 'linear-gradient(180deg, rgba(212,175,55,0.10), transparent 60%)' }} />
                 <div className="relative flex-1">
                   <div className="text-xs tracking-wide text-[#b89228] uppercase">B. The Generational Masterpiece Residences</div>
                   <div className="mt-1 heading-serif text-xl text-neutral-900">Signature Full Floors</div>
-                  <div className="mt-3 flex flex-wrap items-center gap-3 text-sm text-neutral-700">
-                    <span className="rounded-full border border-neutral-200 px-3 py-1 bg-white soft-shadow">₹32–42 Cr</span>
-                    <span className="rounded-full border border-neutral-200 px-3 py-1 bg-white soft-shadow">4,800–6,000 sq.ft</span>
-                  </div>
-                  <p className="mt-4 text-neutral-700">A full-floor, generational estate engineered for privacy, wellness, and longevity.</p>
-                  <div className="mt-3 text-sm text-neutral-600">Designed for families who value space, silence, and permanence.</div>
-
-                  <div className="mt-4 rounded-2xl border border-neutral-200 p-4">
-                    <div className="text-xs tracking-wide text-[#b89228] uppercase">Core architectural features</div>
-                    <ul className="mt-2 space-y-2 text-sm text-neutral-700">
-                      <li className="flex items-start gap-2"><span className="mt-2 h-1.5 w-6 rounded-full gold-gradient block" /> Zero shared walls → total structural privacy for decades</li>
-                      <li className="flex items-start gap-2"><span className="mt-2 h-1.5 w-6 rounded-full gold-gradient block" /> 360° sun-path + cross-ventilation engineering for long-term health</li>
-                      <li className="flex items-start gap-2"><span className="mt-2 h-1.5 w-6 rounded-full gold-gradient block" /> Independent service zones & future-proof structural planning</li>
-                    </ul>
+                  <div className="mt-3 text-sm text-neutral-700">
+                    <span className="rounded-full border border-neutral-200 px-3 py-1 bg-white/80 soft-shadow">Price: ₹32–42 Cr</span>
+                    <span className="ml-2 rounded-full border border-neutral-200 px-3 py-1 bg-white/80 soft-shadow">Size: 4,800–6,000 sq.ft</span>
                   </div>
 
-                  <div className="mt-4 rounded-2xl border border-neutral-200 p-4">
-                    <div className="text-xs tracking-wide text-[#b89228] uppercase">Optional add-on programs</div>
-                    <ul className="mt-2 space-y-2 text-sm text-neutral-700">
-                      <li>Architect Signature Program (Morphogenesis / Hadi Teherani)</li>
-                      <li>Branded Interior Program (Minotti / Armani Casa)</li>
-                    </ul>
-                  </div>
-
-                  <div className="mt-4 rounded-2xl border border-neutral-200 p-4">
-                    <div className="text-xs tracking-wide text-[#b89228] uppercase">Family Heritage Room</div>
-                    <ul className="mt-2 space-y-2 text-sm text-neutral-700">
-                      <li>Private library</li>
-                      <li>Safe room</li>
-                      <li>Archive lounge for documents, art, and legacy items</li>
-                    </ul>
+                  <div className="mt-5 space-y-4">
+                    <div>
+                      <div className="text-xs tracking-wide text-[#b89228] uppercase">Engineering</div>
+                      <ul className="mt-2 space-y-2 text-sm text-neutral-700">
+                        <li className="flex items-start gap-2"><span className="mt-2 h-1.5 w-6 rounded-full gold-gradient block" /> Zero shared walls for lifetime structural privacy</li>
+                        <li className="flex items-start gap-2"><span className="mt-2 h-1.5 w-6 rounded-full gold-gradient block" /> 360° ventilation + sun-path engineering for long-term wellness</li>
+                        <li className="flex items-start gap-2"><span className="mt-2 h-1.5 w-6 rounded-full gold-gradient block" /> High-strength slabs and core systems built for multi-decade use</li>
+                        <li className="flex items-start gap-2"><span className="mt-2 h-1.5 w-6 rounded-full gold-gradient block" /> Dedicated services spine ensuring isolated utility operations</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <div className="text-xs tracking-wide text-[#b89228] uppercase">Design Purpose</div>
+                      <ul className="mt-2 space-y-2 text-sm text-neutral-700">
+                        <li>Full-floor exclusivity offering independent, estate-like living</li>
+                        <li>Designed for families needing space, quiet, and total autonomy</li>
+                        <li>Wellness-led planning with cross-ventilation and daylight optimisation</li>
+                        <li>Structured layouts adaptable for future family lifestyle transitions</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <div className="text-xs tracking-wide text-[#b89228] uppercase">Legacy Features</div>
+                      <ul className="mt-2 space-y-2 text-sm text-neutral-700">
+                        <li>Optional Architect Signature finish (Morphogenesis / Hadi Teherani)</li>
+                        <li>Optional Branded Interiors (Minotti / Armani Casa)</li>
+                        <li>Customisable Heritage Room: library, safe room, archive lounge</li>
+                        <li>Positioned as collectible full-floor residences with long-term prestige</li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
-                <div className="mt-auto rounded-xl border border-neutral-200 bg-white p-4 text-sm text-neutral-700 soft-shadow">
+                <div className="mt-auto rounded-xl border border-neutral-200 bg-white/90 backdrop-blur p-4 text-sm text-neutral-700 soft-shadow">
                   <div className="text-xs tracking-wide text-[#b89228] uppercase">Positioning</div>
-                  <div className="mt-1">A masterpiece designed to outlast generations.</div>
+                  <div className="mt-1">Outlast generations with full-floor autonomy.</div>
                 </div>
               </motion.div>
 
               {/* Tier C */}
               <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }} className="relative rounded-3xl border border-neutral-200 bg-white p-6 overflow-hidden h-full flex flex-col">
+                {/* Faded background image */}
+                <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1629380321590-3b3f75d66dec?ixid=M3w3OTkxMTl8MHwxfHNlYXJjaHwxfHxjZXJhbWljJTIwcG90dGVyeSUyMGhhbmRtYWRlfGVufDB8MHx8fDE3NjM3MTU4MTN8MA&ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
+                <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.92))' }} />
                 <div className="absolute -inset-px rounded-3xl pointer-events-none" style={{ background: 'linear-gradient(180deg, rgba(212,175,55,0.12), transparent 60%)' }} />
                 <div className="relative flex-1">
                   <div className="text-xs tracking-wide text-[#b89228] uppercase">C. The Heritage Collection</div>
-                  <div className="mt-1 heading-serif text-xl text-neutral-900">5 Sky Penthouses (Auction-Only)</div>
-                  <div className="mt-3 flex flex-wrap items-center gap-3 text-sm text-neutral-700">
-                    <span className="rounded-full border border-neutral-200 px-3 py-1 bg-white soft-shadow">Base Auction: ₹70 Cr</span>
-                    <span className="rounded-full border border-neutral-200 px-3 py-1 bg-white soft-shadow">Expected: ₹95–130 Cr</span>
-                    <span className="rounded-full border border-neutral-200 px-3 py-1 bg-white soft-shadow">One-of-One sky estates</span>
+                  <div className="mt-1 heading-serif text-xl text-neutral-900">Sky Penthouses (Auction-Only)</div>
+                  <div className="mt-3 text-sm text-neutral-700">
+                    <span className="rounded-full border border-neutral-200 px-3 py-1 bg-white/80 soft-shadow">Price: ₹70 Cr Base</span>
+                    <span className="ml-2 rounded-full border border-neutral-200 px-3 py-1 bg-white/80 soft-shadow">₹95–130 Cr Expected</span>
                   </div>
 
-                  <div className="mt-4 rounded-2xl border border-neutral-200 p-4">
-                    <div className="text-xs tracking-wide text-[#b89228] uppercase">Engineering for multiple decades</div>
-                    <ul className="mt-2 space-y-2 text-sm text-neutral-700">
-                      <li className="flex items-start gap-2"><span className="mt-2 h-1.5 w-6 rounded-full gold-gradient block" /> Reinforced slabs & structural integrity for lifetime use</li>
-                      <li className="flex items-start gap-2"><span className="mt-2 h-1.5 w-6 rounded-full gold-gradient block" /> Private HVAC systems, private elevator cores</li>
-                      <li className="flex items-start gap-2"><span className="mt-2 h-1.5 w-6 rounded-full gold-gradient block" /> Independent power & water pressure systems</li>
-                    </ul>
-                  </div>
-
-                  <div className="mt-4 rounded-2xl border border-neutral-200 p-4">
-                    <div className="text-xs tracking-wide text-[#b89228] uppercase">Signature legacy add-ons (exclusive)</div>
-                    <ul className="mt-2 space-y-2 text-sm text-neutral-700">
-                      <li>Archival Vault for family deeds, documents, and heritage assets</li>
-                      <li>Heirloom Gallery for art, sculpture, memorabilia</li>
-                      <li>Estate Lounge with future-proof wiring & structural readiness</li>
-                      <li>Sky-deck pools, double-height lounges, meditation terraces</li>
-                    </ul>
+                  <div className="mt-5 space-y-4">
+                    <div>
+                      <div className="text-xs tracking-wide text-[#b89228] uppercase">Engineering</div>
+                      <ul className="mt-2 space-y-2 text-sm text-neutral-700">
+                        <li className="flex items-start gap-2"><span className="mt-2 h-1.5 w-6 rounded-full gold-gradient block" /> Reinforced structural slabs for lifetime load and safety</li>
+                        <li className="flex items-start gap-2"><span className="mt-2 h-1.5 w-6 rounded-full gold-gradient block" /> Private elevator cores + independent HVAC and power networks</li>
+                        <li className="flex items-start gap-2"><span className="mt-2 h-1.5 w-6 rounded-full gold-gradient block" /> Double-height engineering built for generational resilience</li>
+                        <li className="flex items-start gap-2"><span className="mt-2 h-1.5 w-6 rounded-full gold-gradient block" /> Separate mechanical systems for long-term maintenance autonomy</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <div className="text-xs tracking-wide text-[#b89228] uppercase">Design Purpose</div>
+                      <ul className="mt-2 space-y-2 text-sm text-neutral-700">
+                        <li>One-of-one sky estates crafted for absolute privacy and stature</li>
+                        <li>Double-height living, private pools, terraces, meditation decks</li>
+                        <li>Estate-style planning suitable for hosting, entertaining, and family legacy</li>
+                        <li>Designed as permanent, iconic sky residences meant to endure decades</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <div className="text-xs tracking-wide text-[#b89228] uppercase">Legacy Features</div>
+                      <ul className="mt-2 space-y-2 text-sm text-neutral-700">
+                        <li>Archival Vault for critical family documents and generational records</li>
+                        <li>Heirloom Gallery for art, sculpture and personal collections</li>
+                        <li>Estate Lounge designed for future generational gatherings</li>
+                        <li>Auction-led scarcity ensures long-term value appreciation and uniqueness</li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
-                <div className="mt-auto rounded-xl border border-neutral-200 bg-white p-4 text-sm text-neutral-700 soft-shadow">
+                <div className="mt-auto rounded-xl border border-neutral-200 bg-white/90 backdrop-blur p-4 text-sm text-neutral-700 soft-shadow">
                   <div className="text-xs tracking-wide text-[#b89228] uppercase">Scarcity advantage</div>
-                  <div className="mt-1">No other Pune property offers generational engineering, auction-led exclusivity, and global-brand design customization.</div>
+                  <div className="mt-1">Auction-only, one-of-one sky estates with generational engineering.</div>
                 </div>
               </motion.div>
             </div>
