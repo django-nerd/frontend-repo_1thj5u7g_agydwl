@@ -311,11 +311,11 @@ export default function App() {
             </div>
             <p className="mt-1 text-neutral-600">Three tiers, one permanence-first philosophy</p>
 
-            <div className="mt-6 grid lg:grid-cols-3 gap-6">
+            <div className="mt-6 grid lg:grid-cols-3 gap-6 items-stretch">
               {/* Tier A */}
-              <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="relative rounded-3xl border border-neutral-200 bg-white p-6 overflow-hidden">
+              <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="relative rounded-3xl border border-neutral-200 bg-white p-6 overflow-hidden h-full flex flex-col">
                 <div className="absolute -inset-px rounded-3xl pointer-events-none" style={{ background: 'linear-gradient(180deg, rgba(212,175,55,0.10), transparent 60%)' }} />
-                <div className="relative">
+                <div className="relative flex-1">
                   <div className="text-xs tracking-wide text-[#b89228] uppercase">A. The Legacy Residences</div>
                   <div className="mt-1 heading-serif text-xl text-neutral-900">Ultra-Luxury Family Homes</div>
                   <div className="mt-3 flex flex-wrap items-center gap-3 text-sm text-neutral-700">
@@ -330,18 +330,18 @@ export default function App() {
                     <li className="flex items-start gap-2"><span className="mt-2 h-1.5 w-6 rounded-full gold-gradient block" /> Sustainable HVAC & filtration designed to last generations</li>
                     <li className="flex items-start gap-2"><span className="mt-2 h-1.5 w-6 rounded-full gold-gradient block" /> Space planning optimised for evolving family needs</li>
                   </ul>
-                  <div className="mt-4 rounded-xl border border-neutral-200 bg-white p-4 text-sm text-neutral-700 soft-shadow">
-                    <div className="text-xs tracking-wide text-[#b89228] uppercase">Positioning</div>
-                    <div className="mt-1 italic">“Homes that age gracefully.”</div>
-                    <div className="mt-1">Ideal for legacy families, multigenerational living, and inheritance planning.</div>
-                  </div>
+                </div>
+                <div className="mt-auto rounded-xl border border-neutral-200 bg-white p-4 text-sm text-neutral-700 soft-shadow">
+                  <div className="text-xs tracking-wide text-[#b89228] uppercase">Positioning</div>
+                  <div className="mt-1 italic">“Homes that age gracefully.”</div>
+                  <div className="mt-1">Ideal for legacy families, multigenerational living, and inheritance planning.</div>
                 </div>
               </motion.div>
 
               {/* Tier B */}
-              <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.05 }} className="relative rounded-3xl border border-neutral-200 bg-white p-6 overflow-hidden">
+              <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.05 }} className="relative rounded-3xl border border-neutral-200 bg-white p-6 overflow-hidden h-full flex flex-col">
                 <div className="absolute -inset-px rounded-3xl pointer-events-none" style={{ background: 'linear-gradient(180deg, rgba(212,175,55,0.10), transparent 60%)' }} />
-                <div className="relative">
+                <div className="relative flex-1">
                   <div className="text-xs tracking-wide text-[#b89228] uppercase">B. The Generational Masterpiece Residences</div>
                   <div className="mt-1 heading-serif text-xl text-neutral-900">Signature Full Floors</div>
                   <div className="mt-3 flex flex-wrap items-center gap-3 text-sm text-neutral-700">
@@ -376,18 +376,17 @@ export default function App() {
                       <li>Archive lounge for documents, art, and legacy items</li>
                     </ul>
                   </div>
-
-                  <div className="mt-4 rounded-xl border border-neutral-200 bg-white p-4 text-sm text-neutral-700 soft-shadow">
-                    <div className="text-xs tracking-wide text-[#b89228] uppercase">Positioning</div>
-                    <div className="mt-1">A masterpiece designed to outlast generations.</div>
-                  </div>
+                </div>
+                <div className="mt-auto rounded-xl border border-neutral-200 bg-white p-4 text-sm text-neutral-700 soft-shadow">
+                  <div className="text-xs tracking-wide text-[#b89228] uppercase">Positioning</div>
+                  <div className="mt-1">A masterpiece designed to outlast generations.</div>
                 </div>
               </motion.div>
 
               {/* Tier C */}
-              <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }} className="relative rounded-3xl border border-neutral-200 bg-white p-6 overflow-hidden">
+              <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }} className="relative rounded-3xl border border-neutral-200 bg-white p-6 overflow-hidden h-full flex flex-col">
                 <div className="absolute -inset-px rounded-3xl pointer-events-none" style={{ background: 'linear-gradient(180deg, rgba(212,175,55,0.12), transparent 60%)' }} />
-                <div className="relative">
+                <div className="relative flex-1">
                   <div className="text-xs tracking-wide text-[#b89228] uppercase">C. The Heritage Collection</div>
                   <div className="mt-1 heading-serif text-xl text-neutral-900">5 Sky Penthouses (Auction-Only)</div>
                   <div className="mt-3 flex flex-wrap items-center gap-3 text-sm text-neutral-700">
@@ -414,11 +413,10 @@ export default function App() {
                       <li>Sky-deck pools, double-height lounges, meditation terraces</li>
                     </ul>
                   </div>
-
-                  <div className="mt-4 rounded-xl border border-neutral-200 bg-white p-4 text-sm text-neutral-700 soft-shadow">
-                    <div className="text-xs tracking-wide text-[#b89228] uppercase">Scarcity advantage</div>
-                    <div className="mt-1">No other Pune property offers generational engineering, auction-led exclusivity, and global-brand design customization.</div>
-                  </div>
+                </div>
+                <div className="mt-auto rounded-xl border border-neutral-200 bg-white p-4 text-sm text-neutral-700 soft-shadow">
+                  <div className="text-xs tracking-wide text-[#b89228] uppercase">Scarcity advantage</div>
+                  <div className="mt-1">No other Pune property offers generational engineering, auction-led exclusivity, and global-brand design customization.</div>
                 </div>
               </motion.div>
             </div>
