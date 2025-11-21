@@ -3,30 +3,14 @@
 > vite
 
 
-  VITE v5.4.20  ready in 195 ms
+  VITE v5.4.20  ready in 209 ms
 
   ➜  Local:   http://localhost:3000/
   ➜  Network: http://172.20.6.21:3000/
-7:12:06 PM [vite] warning: The character ">" is not valid inside a JSX element
-62 |                <ul className="space-y-2 text-neutral-300 list-disc pl-5">
-63 |                  <li>India added 11,000 new millionaires in 2023</li>
-64 |                  <li>3,600+ UHNIs (> $30M); growing at 11% YoY</li>
-   |                                    ^
-65 |                  <li>32% of UHNIs prefer luxury real estate as a generational asset</li>
-66 |                  <li>Ultra-luxury market growth: 18–22% YoY</li>
-
-  Plugin: vite:esbuild
-  File: /home/workspace/src/App.jsx
-7:12:07 PM [vite] ✨ new dependencies optimized: framer-motion, @splinetool/react-spline
-7:12:07 PM [vite] ✨ optimized dependencies changed. reloading
-7:12:07 PM [vite] warning: The character ">" is not valid inside a JSX element
-62 |                <ul className="space-y-2 text-neutral-300 list-disc pl-5">
-63 |                  <li>India added 11,000 new millionaires in 2023</li>
-64 |                  <li>3,600+ UHNIs (> $30M); growing at 11% YoY</li>
-   |                                    ^
-65 |                  <li>32% of UHNIs prefer luxury real estate as a generational asset</li>
-66 |                  <li>Ultra-luxury market growth: 18–22% YoY</li>
-
-  Plugin: vite:esbuild
-  File: /home/workspace/src/App.jsx
-The file does not exist at "/home/workspace/node_modules/.vite/deps/chunk-I4MZPW7S.js?v=35394813" which is in the optimize deps directory. The dependency might be incompatible with the dep optimizer. Try adding it to `optimizeDeps.exclude`.
+[vite:css] @import must precede all other statements (besides @charset or empty @layer)
+4  |  
+5  |  /* Google Fonts for luxury typography */
+6  |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+7  |  
+8  |  @layer base {
