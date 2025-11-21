@@ -202,6 +202,54 @@ export default function App() {
           </div>
         </section>
 
+        {/* Why We Win vs Competitors */}
+        <section className="relative rounded-3xl border border-neutral-200 bg-white overflow-hidden soft-shadow">
+          <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(900px_300px_at_80%_-20%, rgba(212,175,55,0.10), transparent 60%)' }} />
+          <div className="p-6 sm:p-10">
+            <div className="flex items-center gap-3">
+              <div className="h-1.5 w-12 gold-gradient rounded-full" />
+              <h2 className="heading-serif text-2xl text-neutral-900">Why we win vs competitors</h2>
+            </div>
+            <p className="mt-1 text-neutral-600">Four clear edges that compound desirability and pricing power</p>
+
+            <div className="mt-6 grid md:grid-cols-2 gap-5">
+              {[
+                { title: 'Godrej', lead: 'trust + legacy', note: 'Century-old credibility lowers perceived risk' },
+                { title: 'Koregaon Park', lead: 'scarcity + heritage', note: 'The address is the amenity; supply-constrained' },
+                { title: 'Architect / brand tie-up', lead: 'global appeal', note: 'Design pedigree that travels across markets' },
+                { title: 'Auction penthouses', lead: 'PR flywheel + premium pricing power', note: 'Headline moments that set new benchmarks' },
+              ].map((x, i) => (
+                <motion.div
+                  key={x.title}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: i * 0.05 }}
+                  className="group relative rounded-2xl border border-neutral-200 bg-white p-5 sm:p-6 overflow-hidden"
+                >
+                  <div className="absolute -inset-px rounded-2xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity" style={{ background: 'linear-gradient(180deg, rgba(212,175,55,0.18), transparent 60%)' }} />
+                  <div className="relative flex items-start gap-4">
+                    <div className="shrink-0 h-10 w-10 rounded-xl border border-neutral-200 bg-white flex items-center justify-center soft-shadow">
+                      <span className="h-2 w-7 rounded-full gold-gradient block" />
+                    </div>
+                    <div className="relative">
+                      <div className="text-xs tracking-wide text-[#b89228] uppercase">{x.title}</div>
+                      <div className="mt-1 heading-serif text-xl text-neutral-900">{x.lead}</div>
+                      <div className="mt-1.5 text-sm text-neutral-600">{x.note}</div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Subtle banner */}
+            <motion.div initial={{ opacity: 0, y: 8 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }} className="mt-6 rounded-xl border border-neutral-200 bg-white p-4 text-sm text-neutral-700 flex items-center justify-center gap-3">
+              <span className="h-1.5 w-10 rounded-full gold-gradient block" />
+              These pillars create outsized signaling, conversion confidence, and willingness-to-pay.
+            </motion.div>
+          </div>
+        </section>
+
         {/* White Space Callout */}
         <section className="relative overflow-hidden rounded-3xl border border-[#D4AF37]/25 bg-white soft-shadow">
           <div className="absolute inset-0 opacity-60" style={{ background: 'radial-gradient(600px_200px_at_10%_0%, rgba(212,175,55,0.12), transparent 60%)' }} />
